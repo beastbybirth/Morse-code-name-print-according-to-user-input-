@@ -1,6 +1,6 @@
-int st = 1500;
-int lt = 3000;
-int dt = 500;
+int st = 700;
+int lt = 1400;
+int dt = 1000;
 
 void setup() {
 
