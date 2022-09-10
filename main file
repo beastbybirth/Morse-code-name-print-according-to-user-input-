@@ -1,0 +1,120 @@
+int st = 1500;
+int lt = 3000;
+int dt = 500;
+
+void setup() {
+
+pinMode(LED_BUILTIN, OUTPUT);
+
+
+}
+
+void loop() {
+
+  Serial.println("Enter the name: " );
+  String name = Serial.readString();
+  for(int i=0; i < name.length(); i++)
+  {
+    
+    switch(name[i])
+    {
+      case 'a': dot(); dash();
+      delay(1000); break;
+
+      case 'b': dash(); dot(); dot();dot();
+      delay(1000); break; 
+      
+      case 'c': dash(); dot(); dash();dot();
+      delay(1000); break; 
+
+      case 'd': dash(); dot(); dot();
+      delay(1000); break; 
+
+      case 'e': dot();
+      delay(1000); break; 
+
+      case 'f': dot(); dot();dash(); dot();
+      delay(1000); break; 
+
+            case 'g': dash(); dash(); dot();
+      delay(1000); break; 
+
+            case 'h': dot(); dot(); dot();dot();
+      delay(1000); break; 
+
+            case 'i': dot(); dot();
+      delay(1000); break; 
+
+            case 'j': dot(); dash(); dash(); dash();
+      delay(1000); break; 
+
+            case 'k': dash(); dot(); dash();
+      delay(1000); break; 
+
+            case 'l': dot(); dash(); dot();dot();
+      delay(1000); break;       
+         
+      case 'm': dash(); dash();
+      delay(1000); break;  
+
+       case 'n': dash(); dot();
+      delay(1000); break; 
+
+      case 'o': dash(); dash(); dash();
+      delay(1000); break; 
+
+      case 'p': dot(); dash(); dash();dot();
+      delay(1000); break; 
+
+      case 'q': dash(); dash(); dot(); dash();
+      delay(1000); break; 
+
+      case 'r': dot(); dash(); dot();
+      delay(1000); break;
+
+      case 's': dot();  dot();dot();
+      delay(1000); break;
+
+      case 't': dash();
+      delay(1000); break; 
+
+      case 'u': dot(); dot(); dash();
+      delay(1000); break; 
+
+      case 'v': dot(); dot();dot(); dash();
+      delay(1000); break; 
+
+      case 'w': dot(); dash(); dash();
+      delay(1000); break; 
+
+      
+      case 'x': dash(); dot(); dot(); dash();
+      delay(1000); break; 
+
+      case 'y': dash(); dot(); dash(); dash();
+      delay(1000); break; 
+
+      case 'z': dash(); dash(); dot(); dot();
+      delay(1000); break;
+      
+    }
+
+  }
+}
+
+
+void dot()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(st);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(dt);
+
+}
+void dash()
+{
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(lt);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(dt);
+}
